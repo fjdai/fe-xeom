@@ -5,8 +5,8 @@ const WaitingPage = () => {
     return (
         <div className={styles.waitingContainer}>
             <div className={styles.waitingContent}>
-                <h2 className={styles.waitingTitle}>Đang kết nối...</h2>
-                <p className={styles.waitingText}>Vui lòng đợi trong khi chúng tôi thiết lập kết nối.</p>
+                <h2 className={styles.waitingTitle}>Hello ku</h2>
+                <p className={styles.waitingText}>Chúc em nhiều sức khỏe nheee</p>
                 <div className={styles.spinner}></div>
             </div>
         </div>
