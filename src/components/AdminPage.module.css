@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.adminContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.adminContent {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.adminTitle {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcomeText {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.reviewsContainer {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.reviewItem {
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.reviewItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.reviewHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.reviewDate {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.reviewStar {
+    display: flex;
+}
+
+.starFilled,
+.starEmpty {
+    font-size: 1.2rem;
+    margin-right: 2px;
+}
+
+.starFilled {
+    color: #FFD700;
+}
+
+.starEmpty {
+    color: #ccc;
+}
+
+.reviewComment {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.loadMoreButton {
+    margin-top: 1.5rem;
+    padding: 0.9rem 2rem;
+    background: linear-gradient(45deg, #FF6A88, #FF99AC);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loadMoreButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(255, 106, 136, 0.4);
+}
+
+.loadMoreButton:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(255, 106, 136, 0.4);
+}
+
+.logoutButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: linear-gradient(45deg, #FF6A88, #FF99AC);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(255, 106, 136, 0.3);
+}
+
+.logoutButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 106, 136, 0.4);
+}
+
+.logoutButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(255, 106, 136, 0.3);
+}
+
+.logoutIcon {
+    margin-right: 5px;
+    font-size: 1.1rem;
+}
+
+.logoutText {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .logoutText {
+        display: inline;
+    }
+}
+
+.loading,
+.error {
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid white;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 375px) {
+    .adminContent {
+        padding: 2rem;
+    }
+
+    .adminTitle {
+        font-size: 1.8rem;
+    }
+
+    .reviewItem {
+        font-size: 0.9rem;
+    }
+
+    .loadMoreButton {
+        font-size: 0.95rem;
+    }
+}
