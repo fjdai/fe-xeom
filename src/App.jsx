@@ -12,7 +12,7 @@ function App() {
     // Simulate connecting to server
     setTimeout(() => {
       setIsConnecting(false);
-    }, 2000);
+    }, 5000);
   }, []);
 
   const handleLogin = (type) => {
