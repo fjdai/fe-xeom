@@ -38,7 +38,6 @@ const UserPage = ({ onLogout }) => {
         } catch (error) {
             console.error('Error submitting review:', error);
             alert('Có lỗi xảy ra khi gửi đánh giá. Vui lòng thử lại sau.');
-        }
         } finally {
             setIsLoading(false);
         }
@@ -77,7 +76,7 @@ const UserPage = ({ onLogout }) => {
                         onChange={(e) => setReview(e.target.value)}
                         placeholder="Viết đánh giá của bạn ở đây..."
                         required
-                         disabled={isLoading}
+                        disabled={isLoading}
                     />
                     <button type="submit" className={styles.submitButton} disabled={isLoading}>
                         {isLoading ? 'Đang gửi...' : 'Gửi Đánh Giá'}
