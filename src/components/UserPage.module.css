@@ -231,3 +231,14 @@
         /* Ensure full width on small screens */
     }
 }
+
+.starRating button:disabled,
+.reviewInput:disabled,
+.submitButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.submitButton:disabled {
+    background: #ccc;
+}
